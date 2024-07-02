@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <p id="soal1"></p>
+    <p id="soal2"></p>
+    <p id="soal3"></p>
+    <p id="soal4"></p>
+    <p id="soal5"></p>
+
+    <script>
+        // Fungsi yang mengembalikan nilai bertipe integer
+        function fungsiInteger(a, b) {
+            return a - b;
+        }
+
+        // Fungsi yang mengembalikan nilai boolean
+        function fungsiBoolean(a, b) {
+            return a || b;
+        }
+        
+        // Fungsi yang mengembalikan nilai bertipe string
+        function gabungString(a, b) {
+            return a + " " + b ;
+        }
+
+        // Fungsi yang mengembalikan nilai bertipe boolean
+        function perbandinganTipe1(a, b) {
+            return a == b;
+        }
+
+        function perbandinganTipe2(a, b) {
+            return a === b;
+        }
+
+        // Menampilkan hasil fungsi di halaman
+        document.getElementById("soal1").innerHTML = "Operasi aritmatika: " + fungsiInteger(10, 5);
+        document.getElementById("soal2").innerHTML = "Operasi logika: " + fungsiBoolean(true,false);
+        document.getElementById("soal3").innerHTML = "Nama lengkap: " + gabungString("ilma", "chan");
+        document.getElementById("soal4").innerHTML = "Output Boolean 1: " + perbandinganTipe1(5, '5');
+        document.getElementById("soal5").innerHTML = "Output Boolean 2: " + perbandinganTipe2(5, '5');
+       
+        let angka = [1, 2, 3, 4, 5] 
+angka.map(function (nilai) { 
+   document.write(nilai + "<br>"); 
+ }); 
+ 
+// contoh kasus untuk if else 
+let nilai = 80; 
+if (nilai >= 80){ 
+    document.write("Nilai kamu A"); 
+} else if (nilai >= 70){ 
+    document.write("Nilai kamu B"); 
+} else if (nilai >= 60){ 
+    document.write("Nilai kamu C"); 
+} else { 
+    document.write("Nilai kamu 0"); 
+}
+
+
+// game check jodoh 
+let namaCewe = "akane"; 
+let namaCowo = "yamada"; 
+let hasil = Math.floor(Math.random() * 71) + 30; 
+if (hasil >= 80) { 
+    document.write("<br>" + " Ciee " + namaCewe + " dan " + namaCowo + " Jodoh"); 
+} else if (hasil >= 70) { 
+    document.write("<br>" + " asikk " + namaCewe + " dan " + namaCowo + " PDKT dulu"); 
+} else if (hasil >= 60) { 
+    document.write("<br>" + " Emm " + namaCewe + " dan " + namaCowo + " kurang Cocok dee"); 
+} else { 
+    document.write("<br>" + "Begitulah " + namaCewe + " dan " + namaCowo + " ___"); 
+}
+</script>
+</body>
+</html>
